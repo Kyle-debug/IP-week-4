@@ -29,41 +29,30 @@ $(document).ready(function(){
    switch(psize){
     case "0":
       price =0;
+    break;  
+    case "Mega":
+       price = 13;
+       console.log(price);  
     break;
-    case "large":
-       price = 1200;
+    case "Large":
+       price = 11;
        console.log(price);
      break;
-     case "medium":
-       price = 850;
+     case "Medium":
+       price = 8;
        console.log("The price is "+price);
      break;
-     case "small":
-       price = 600;
+     case "Small":
+       price = 6;
        console.log(price);
      default:
        console.log("error"); 
    }
-   switch(pcrust){
-      case "0":
-        crust_price = 0;
-      break;
-      case "Crispy":
-        crust_price = 200;
-      break;
-      case "Stuffed":
-        crust_price = 250;
-      break;
-      case "Gluten-free":
-        crust_price = 180;
-      break;
-      default:
-        console.log("No price"); 
-    }
+   
     let topping_value = ptopping.length*50;
     console.log("toppins value" + topping_value);
 
-    if((psize == "0") && (pcrust == "0")){
+    if((psize == "0")){
       console.log("nothing selected");
       $("button.proceed").show();
       $("#information").show();
@@ -76,7 +65,7 @@ $(document).ready(function(){
       $("div.choise").slideDown(1000);
     }
 
-    total = price + crust_price + topping_value;
+    total = price + topping_value;
     console.log(total);
     let checkoutTotal =0;
     checkoutTotal = checkoutTotal + total;
@@ -101,16 +90,20 @@ $(document).ready(function(){
         case "0":
           price =0;
         break;
+        case "Mega":
+            price = 13;
+            console.log(price);  
+        break;
         case "large":
-           price = 1200;
+           price = 11;
            console.log(price);
          break;
          case "medium":
-           price = 850;
+           price = 8;
            console.log("The price is "+price);
          break;
          case "small":
-           price = 600;
+           price = 6;
            console.log(price);
          default:
            console.log("error"); 
@@ -119,15 +112,14 @@ $(document).ready(function(){
           case "0":
             crust_price = 0;
           break;
-          case "Crispy":
-            crust_price = 200;
+          case "Original Hand Tossed":
           break;
-          case "Stuffed":
-            crust_price = 150;
+          case "Thin Crush":
           break;
-          case "Gluten-free":
-            crust_price = 180;
+          case "Deep Dish":
           break;
+          case "Cheese Stuffed":
+          break;    
           default:
             console.log("No price"); 
         }
@@ -139,9 +131,9 @@ $(document).ready(function(){
         checkoutTotal = checkoutTotal + total;
         console.log(checkoutTotal);
       // constractor function
-      var newOrder = new Getpizza(pname, psize, pcrust,ptopping,total);
+      var newOrder = new Getpizza(pname, psize,ptopping,total);
 
-      $("#ordersmade").append('<tr><td id="pizzaname">'+newOrder.name +'</td><td id="pizzasize">' + newOrder.size + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatopping">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
+      $("#ordersmade").append('<tr><td id="pizzaname">'+newOrder.name +'</td><td id="pizzasize">' + newOrder.size + '</td><td id="pizzatopping">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
       console.log(newOrder);
       
       
