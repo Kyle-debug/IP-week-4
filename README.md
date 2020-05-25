@@ -3,15 +3,29 @@
 #### By **{List of contributors}**
 ## Description
 {You own a pizza place and as a way of trying to widen your customer base, you decide to create a web application where your customers order different sizes of pizzas with one or more toppings. . }
-## Setup/Installation Requirements
-* This is a great place
-* to list setup instructions
-* in a simple
-* easy-to-understand
-* format
-{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? Do I need to install any dependencies? How should I set up my databases? Is there other code this app depends on?}
+## Prerequisites
+You need a web browser installed on your machine to run this program. 
+Examples:
+  * Internet explorer
+  * Chrome 
+  * Mozilla firefox
+  * Opera mini
+  * etc
+## Installation / Setup instruction
+* Open Terminal {Ctrl+Alt+T}
+
+* cd Akosih's Pizzeria
+
+* code . or atom . depending on the text editor of your choise.
+ ## BDD
+| Behaviour      | Input        | Output       |
+| :------------- | :----------: | -----------: |
+|  Enter your name  |   Kyle Kioko |     |
+| Enter your Email Address  | kylekioko.kk@gmail.com |   |
+| Enter your message or comment   |  I would love to work with you     |     |
+| Press Submit|     |Pop up "Kyle Kioko , I have received your message. Thank you for reaching out to me.| 
 ## Known Bugs
-{Are there issues that have not yet been resolved that you want to let users know you know? Outline any issues that would impact use of your application. Share any workarounds that are in place. }
+{Issue's displaying footer details. }
 ## Technologies Used
 {HTML
 CSS
